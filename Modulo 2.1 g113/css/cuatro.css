@@ -1,0 +1,24 @@
+.boton.cuatro::after {/* este after es un seudo elemento que nos permite agregar un elemento dentro de otro*/
+    content: "";/* "content" es una propiedad con cadena vacía */
+    width: 1px;/* Aquí es para centrar el cuadrado al tamaño del botón */
+    height: 1px;
+    background: none;/* Con la función none no va a ver el elemento porque lo hacemos con background en el .boton.cuatro:hover */
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transition: .3s ease-in-out all;/* Esto es una transición con una función ease in out y all es para todas las propiedades*/
+    border-radius: 100px;/* Aquí se tiene el efecto de un circulo al pasar el mouse */
+    transform-origin: center;/* Con esta función nos permite que al pasar el mouse el efecto se inicie desde el centro hacia afuera */
+
+}
+
+.boton.cuatro:hover::after{
+    transform: scale(200);/* Con esta línea vamos a escalar el elemento a un valor de 400 no conundir con pixeles */
+    background: #cc1010;/* Aquí se hace el efecto al pasar el mouse cambia el color del botón */
+
+}
+.boton.cuatro:hover {/* Aquí nos permite que el botón cambie de color; pero que el fondo siga #cc1010*/
+    background: #960909;
+
+}

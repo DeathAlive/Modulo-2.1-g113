@@ -1,0 +1,28 @@
+.boton.seis {
+	background: none; /* No queremos que tenga un fondo */
+	color: black; /* Con esta función le decimos que el color del texto sea negro */
+}
+
+.boton.seis svg {
+	/* Este es el bloque de estilos de la clase svg */
+	width: 100%;
+	height: 100%;
+	position: absolute; /* Con esta función permitimos darle un posicinamiento absoluto dentro de nuestro botón */
+	top: 0;
+	left: 0;
+	fill: none; /* Aquí no se muestra el color de fondo o de relleno del botón */
+}
+
+.boton.seis rect {
+	width: 100%;
+	height: 100%;
+	stroke: black; /* Esta línea nos permite darle color al borde del botón */
+	stroke-width: 10px; /* Para darle el ancho al borde del botón */
+	stroke-dasharray: 1000; /* Con esta función nos permite que los espacios del dash sean más grandes*/
+	stroke-dashoffset: 1000;
+	transition: 0.6s ease-in-out all;
+}
+
+.boton.seis:hover rect {
+	stroke-dashoffset: 0;/* Con esta función lo que permite es que al momento de pasar el cursor la linea la pasamos a 0 */
+}

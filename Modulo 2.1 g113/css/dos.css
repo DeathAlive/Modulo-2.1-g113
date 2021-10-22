@@ -1,0 +1,16 @@
+.boton.dos::after {
+    content: "";
+    width: 100%;
+    height: 40px;
+    position: absolute;/* Esta es para sacar la capa */
+    z-index: 1;/* esta es para qu el span que habiamos puesto antes en los estilos que quede arriba del span */
+    top: 0;
+    left: calc(-100% - 80px); /* esta es una función de calcular */
+    border-bottom: 80px solid #286cff;/* Este es el tamaño de mi botón con el color azul*/
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;/* esta es una función de tiempo "ease" */
+}
+
+.boton.dos:hover:after {
+    left: 0;
+}

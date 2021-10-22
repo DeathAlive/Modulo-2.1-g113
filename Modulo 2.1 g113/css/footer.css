@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/** code by webdevtrick ( https://webdevtrick.com ) 
+https://www.foolishdeveloper.com/2021/05/responsive-footer-design-using-html-css.html**/
+
+/*<!-- Step 1: Basic Html structure for creating footer designs -->
+<!-- Footer start -->*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1ecec;/* Este es el color de todo el body */
+}
+
+a {
+  transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.footer {
+  position: relative;
+  padding-top: 45px;
+  background: #f8f8f8;/* Aquí es el color del primer bloque del footer */
+}
+
+.footer .footer-about,
+.footer .footer-contact,
+.footer .footer-links,
+.footer .footer-project {
+  position: relative;
+  margin-bottom: 45px;
+  color: #999999;
+}
+
+.footer .footer-about h3,
+.footer .footer-contact h3,
+.footer .footer-links h3,
+.footer .footer-project h3 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #921b1b;/* Este es el color del primer bloque del footer */
+}
+
+.footer .footer-about h3::after,
+.footer .footer-contact h3::after,
+.footer .footer-links h3::after,
+.footer .footer-project h3::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #eeeeee;
+}
+  
+  /* Paso 2: agregue la sección Acerca de la universidad */
+  .footer .footer-social {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .footer .footer-social a {
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+    border: 1px solid #999999;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    padding: 6px 0;
+    border-radius: 35px;
+  }
+  
+  
+  .footer .footer-social a:hover {
+    color: #ffffff;
+    background: #0085ff;
+    border-color: #0085ff;
+  }
+  /* Paso 3: agregue la información de contacto */
+  
+  .footer .footer-contact p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #999999;
+  }
+  
+  .footer .footer-contact i {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #6e0e0e;
+  }
+  
+  .footer .footer-contact a:last-child i {
+    margin: 0;
+  }
+  
+  .footer .footer-contact a:hover i {
+    color: #0085ff;
+  }
+  /* Paso 4: agregue enlaces importantes a la sección del pie de página */
+  
+  .footer .footer-links a {
+    margin-bottom: 6px;
+    padding-left: 15px;
+    color: #999999;
+    display: block;
+  }
+  
+  .footer .footer-links a:last-child {
+    margin: 0;
+  }
+  
+  .footer .footer-links a:hover {
+    color: #0085ff;
+  }
+  
+  .footer .footer-links a::before {
+    position: absolute;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    left: 0;
+  }
+  
+  /* Step 5: Add important projects and images */
+  .footer .footer-project {
+    float: left;
+    font-size: 0;
+  }
+  
+  .footer .footer-project a {
+    padding: 0 8px 8px 0;
+    display: block;
+    width: 33.33%;
+    float: left;
+  }
+  
+  .footer .footer-project a img {
+    width: 100%;
+  }
+  
+  /* Paso 6: agregue el boletín o la opción de suscripción */
+  .footer .footer-newsletter {
+    text-align: center;
+    color: #960d0d; /* Esta es la línea de la invitación a suscribirse */
+    margin-bottom: 35px;
+    max-width: 700px;
+  }
+  
+  .footer .footer-newsletter input {
+    background: rgba(256, 256, 256, .15);
+    margin-bottom: 15px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .footer .footer-newsletter .btn {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;/* Este es el color de las letras del botón suscribe */
+    background: #b91111;/* Este es el color del botón suscribe */
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 35px;
+    font-size: 14px;
+    border: none;
+    transition: .3s;
+  }
+  
+  .footer .footer-newsletter .btn:hover {
+    color: #161718;
+    background: #252525;
+  }
+  
+  .footer .footer-newsletter .btn:focus {
+    box-shadow: none;
+  }
+  
+  
+  /* Paso 7: agregar enlace de pie de página (derechos de autor) */
+  .footer .copyright {
+    position: relative;
+    padding: 25px 0;
+    background: #cf1e1e;/* Este es el color del tercer bloque del footer */
+  }
+  
+  .footer .copyright .copy-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1d1a1a;
+  }
+  
+  .footer .copyright .copy-text p a {
+    color: #0085ff;
+    text-decoration: none;
+  }
+  
+  .footer .copyright .copy-text p a:hover {
+    color: #ff008c;
+  }
+  
+  /* Step 8: Add footer menu to footer design */
+  .footer .copyright .copy-menu {
+    position: relative;
+    font-size: 0;
+    text-align: right;
+  }
+  
+  .footer .copyright .copy-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(238, 23, 23, 0.3);
+    color: #999999;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .footer .copyright .copy-menu a:hover {
+    color: #0085ff;
+  }
+  
+  .footer .copyright .copy-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+  }
+  
+  /* Paso 9: haz que este diseño sea receptivo */
+  @media (max-width: 767.98px) {
+    .footer .copyright .copy-text,
+    .footer .copyright .copy-menu {
+        text-align: center;
+    }
+    
+    .footer .copyright .copy-text p {
+        margin-bottom: 5px;
+    }
+    
+  }

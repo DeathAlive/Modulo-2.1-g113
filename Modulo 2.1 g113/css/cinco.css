@@ -1,0 +1,39 @@
+.boton.cinco span {
+	/* Este el bloque del span */
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: auto; /* Aquí en esta línea nos permite tener el texto "Boton" al lado izquierdo de la flecha */
+
+}
+
+.boton.cinco .icono {
+	/* Este el bloque del icono que trajimos de bootstrap */
+	display: flex;
+	align-items: center;
+	position: absolute; /* Aquí nos permite que el icono lo desplacemos */
+	z-index: 2; /* Aquí nos permite que el icono pase por arriba del texto */
+	left: -40px;
+	/*background: cornflowerblue;*//* Esta línea es por si se quiere cambiar el color del elemento flecha */
+	transition: .3s ease-in-out all;
+    opacity: 1;
+}
+
+.boton.cinco svg {
+	color: #fff;
+	width: 35px;
+	height: 35px;
+}
+
+.boton.cinco:hover {
+    background: #2f9b05;
+}
+
+.boton.cinco:hover .icono {
+	left: calc(100% - 50px);
+	opacity: 1;
+}
+
+.boton.cinco:hover span {
+	/* Este el bloque span con las propiedades para el elemento que trajimos de bootstrap */
+	left: 20px; /* Aquí nos permite que el texto "Botón" se traslade al lado izquierdo del elemento botón */
+}

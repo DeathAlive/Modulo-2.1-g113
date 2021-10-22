@@ -1,0 +1,16 @@
+.boton.uno::after {
+	/* este after es un seudo elemento que nos permite agregar un elemento dentro de otro*/
+	content: ""; /* "content" es una propiedad con cadena vacía */
+	width: 100%;
+	height: 100%;
+	background: #c4b107;
+	position: absolute;
+	z-index: 1;
+	top: -80px;
+	left: 0;
+	transition: 0.3s ease-in-out all; /* Esto es una transición con una función ease in out y all es para todas las propiedades*/
+}
+
+.boton.uno:hover::after {
+	top: 0;
+}

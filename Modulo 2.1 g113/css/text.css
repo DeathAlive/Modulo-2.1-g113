@@ -1,0 +1,16 @@
+
+form,
+fieldset {
+  display: flex;
+  flex-flow: row wrap;
+  width: 480px;
+}
+
+label {
+  width: 200px;
+}
+
+input {
+  width: 250px;
+  margin-bottom: 15px;
+}
